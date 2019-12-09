@@ -6,6 +6,25 @@ namespace data_structure
     {
         private Node _head;
 
+        internal void Delete(Int32 pos)
+        {
+            var innerHead1 = _head;
+            var innerHead2 = new Node();
+            var innerPos = 1;
+            while (innerHead1.Next != null)
+            {
+                innerPos = innerPos + 1;
+                innerHead2 = innerHead1;
+                innerHead1 = innerHead1.Next;
+                if (innerPos == pos)
+                {
+                    break;
+                }
+            }
+
+            innerHead2.Next = innerHead1.Next;
+        }
+
         internal void Insert(Int32 pos, Int32 data)
         {
             var innerPos = 1;
@@ -63,7 +82,9 @@ namespace data_structure
                 Add(i);
             }
 
-            Insert(2, 10);
+            Insert(10, 10);
+
+            Delete(2);
         }
     }
 
