@@ -2,7 +2,7 @@ using System;
 
 namespace data_structure
 {
-    internal class seq_list : IBase
+    internal class Seq_List : IBase
     {
         private readonly Int32[] _array = new Int32[10];
 
@@ -10,10 +10,25 @@ namespace data_structure
 
         internal void Insert(Int32 index, Int32 data)
         {
-            for (int i = _array.Length; i >= index; i--)
+            var i = 0;
+            for (i = _array.Length - 1; i >= index; i--)
             {
                 _array[i] = _array[i - 1];
             }
+            _array[i] = data;
+        }
+
+        internal void Delete(Int32 index)
+        {
+            for (int i = index; i < _array.Length - 1; i++)
+            {
+                _array[i - 1] = _array[i];
+            }
+        }
+
+        internal Int32 Get(Int32 index)
+        {
+            return _array[index];
         }
 
         public void Run()
@@ -22,7 +37,9 @@ namespace data_structure
             {
                 _array[i] = i;
             }
-            Insert(2, 6);
+            Insert(3, 6);
+
+            Delete(3);
         }
     }
 }
