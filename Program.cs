@@ -7,7 +7,8 @@ namespace data_structure
     {
         static void Main(string[] args)
         {
-            
+            IBase basea = new seq_list();
+            basea.Run();
         }
     }
 }
