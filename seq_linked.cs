@@ -4,12 +4,12 @@ namespace data_structure
 {
     internal class Seq_Linked : IBase
     {
-        private Node _head;
+        private Linked_Node _head;
 
         internal void Delete(Int32 pos)
         {
             var innerHead1 = _head;
-            var innerHead2 = new Node();
+            var innerHead2 = new Linked_Node();
             var innerPos = 1;
             while (innerHead1.Next != null)
             {
@@ -38,7 +38,7 @@ namespace data_structure
                     break;
                 }
             }
-            var newNode = new Node
+            var newNode = new Linked_Node
             {
                 Data = data
             };
@@ -58,18 +58,18 @@ namespace data_structure
         {
             if (_head == null)
             {
-                _head = new Node
+                _head = new Linked_Node
                 {
                     Data = data
                 };
                 return;
             }
-            Node innerHead = _head;
+            var innerHead = _head;
             while (innerHead.Next != null)
             {
                 innerHead = innerHead.Next;
             }
-            innerHead.Next = new Node()
+            innerHead.Next = new Linked_Node
             {
                 Data = data
             };
@@ -88,10 +88,10 @@ namespace data_structure
         }
     }
 
-    internal class Node
+    internal class Linked_Node
     {
         internal Int32 Data { get; set; }
 
-        internal Node Next { get; set; }
+        internal Linked_Node Next { get; set; }
     }
 }
