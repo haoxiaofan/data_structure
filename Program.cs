@@ -7,7 +7,7 @@ namespace data_structure
     {
         static void Main(string[] args)
         {
-            IBase basea = new Seq_Queue();
+            IBase basea = new Binary_Tree();
             basea.Run();
         }
     }
