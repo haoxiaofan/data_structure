@@ -7,7 +7,7 @@ namespace data_structure
     {
         static void Main(string[] args)
         {
-            IBase basea = new Seq_Linked_Stack();
+            IBase basea = new Seq_Queue();
             basea.Run();
         }
     }
