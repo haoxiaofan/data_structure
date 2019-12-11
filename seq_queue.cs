@@ -2,7 +2,7 @@ using System;
 
 namespace data_structure
 {
-    internal class Seq_Queue : IBase
+    internal class Seq_Queue : IRun
     {
         private const Int32 _maxLength = 10;
 

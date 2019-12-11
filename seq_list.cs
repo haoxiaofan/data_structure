@@ -2,12 +2,10 @@ using System;
 
 namespace data_structure
 {
-    internal class Seq_List : IBase
+    internal class Seq_List : IRun
     {
         private readonly Int32[] _array = new Int32[10];
-
-
-
+ 
         internal void Insert(Int32 index, Int32 data)
         {
             var i = 0;

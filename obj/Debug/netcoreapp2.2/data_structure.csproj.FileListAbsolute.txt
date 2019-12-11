@@ -1,11 +1,11 @@
+/home/master/work/data_structure/obj/Debug/netcoreapp2.2/data_structure.csprojAssemblyReference.cache
+/home/master/work/data_structure/obj/Debug/netcoreapp2.2/data_structure.csproj.CoreCompileInputs.cache
+/home/master/work/data_structure/obj/Debug/netcoreapp2.2/data_structure.AssemblyInfoInputs.cache
+/home/master/work/data_structure/obj/Debug/netcoreapp2.2/data_structure.AssemblyInfo.cs
 /home/master/work/data_structure/bin/Debug/netcoreapp2.2/data_structure.deps.json
 /home/master/work/data_structure/bin/Debug/netcoreapp2.2/data_structure.runtimeconfig.json
 /home/master/work/data_structure/bin/Debug/netcoreapp2.2/data_structure.runtimeconfig.dev.json
 /home/master/work/data_structure/bin/Debug/netcoreapp2.2/data_structure.dll
 /home/master/work/data_structure/bin/Debug/netcoreapp2.2/data_structure.pdb
-/home/master/work/data_structure/obj/Debug/netcoreapp2.2/data_structure.csprojAssemblyReference.cache
-/home/master/work/data_structure/obj/Debug/netcoreapp2.2/data_structure.csproj.CoreCompileInputs.cache
-/home/master/work/data_structure/obj/Debug/netcoreapp2.2/data_structure.AssemblyInfoInputs.cache
-/home/master/work/data_structure/obj/Debug/netcoreapp2.2/data_structure.AssemblyInfo.cs
 /home/master/work/data_structure/obj/Debug/netcoreapp2.2/data_structure.dll
 /home/master/work/data_structure/obj/Debug/netcoreapp2.2/data_structure.pdb

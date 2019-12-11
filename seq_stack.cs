@@ -2,7 +2,7 @@ using System;
 
 namespace data_structure
 {
-    internal class Seq_Stack : IBase
+    internal class Seq_Stack : IRun
     {
 
         private Int32[] _array = new Int32[10];

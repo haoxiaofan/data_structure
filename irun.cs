@@ -2,7 +2,7 @@ using System;
 
 namespace data_structure
 {
-    interface IBase
+    interface IRun
     {
         void Run();
     }

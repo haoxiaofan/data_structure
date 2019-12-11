@@ -2,7 +2,7 @@ using System;
 
 namespace data_structure
 {
-    internal class Seq_Linked_Stack : IBase
+    internal class Seq_Linked_Stack : IRun
     {
 
         private Linked_Stack_Node _head;

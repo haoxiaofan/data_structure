@@ -1,7 +1,7 @@
 using System;
 namespace data_structure
 {
-    internal class Binary_Tree : IBase
+    internal class Binary_Tree : IRun
     {
         private Binary_Node _root;
         private Int32[] _array = new Int32[20] { 7, 9, 8, 6, 5, 4, 698, 46, 51, 34, 64, 96, 8, 49, 40, 681, 65, 49, 84, 50 };
