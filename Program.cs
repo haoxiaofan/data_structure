@@ -7,7 +7,7 @@ namespace data_structure
     {
         static void Main(string[] args)
         {
-            IRun basea = new A015();
+            IRun basea = new A016();
             basea.Run();
         }
     }

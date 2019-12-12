@@ -37,27 +37,47 @@ namespace data_structure
                 Add(i);
             }
             {
-                var nodes = new List<Node015>();
-                var innerNode = _head;
-                while (innerNode != null)
-                {
-                    nodes.Add(innerNode);
-                    innerNode = innerNode.Next;
-                }
+                // var nodes = new List<Node015>();
+                // var innerNode = _head;
+                // while (innerNode != null)
+                // {
+                //     nodes.Add(innerNode);
+                //     innerNode = innerNode.Next;
+                // }
 
-                for (int i = nodes.Count - 1; i >= 0; i--)
-                {
-                    if (i == 0)
-                    {
-                        nodes[i].Next = null;
-                        break;
-                    }
+                // for (int i = nodes.Count - 1; i >= 0; i--)
+                // {
+                //     if (i == 0)
+                //     {
+                //         nodes[i].Next = null;
+                //         break;
+                //     }
 
-                    nodes[i].Next = nodes[i - 1];
-                }
-                _head = nodes[nodes.Count - 1];
+                //     nodes[i].Next = nodes[i - 1];
+                // }
+                // _head = nodes[nodes.Count - 1];
             }
+            {
+                if (_head == null)
+                {
+                    return;
+                }
 
+                Node015 reverseHead = null;
+                Node015 currentNode = _head;
+                Node015 prevNode = null;
+                while (currentNode != null)
+                {
+                    var nextNode = currentNode.Next;
+                    if (nextNode == null)
+                    {
+                        reverseHead = currentNode;
+                    }
+                    currentNode.Next = prevNode;
+                    prevNode = currentNode;
+                    currentNode = nextNode;
+                }
+            }
         }
     }
 
