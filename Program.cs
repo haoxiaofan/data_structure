@@ -7,7 +7,7 @@ namespace data_structure
     {
         static void Main(string[] args)
         {
-            IRun basea = new Insert_Sort();
+            IRun basea = new A014();
             basea.Run();
         }
     }
