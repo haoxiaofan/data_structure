@@ -31,27 +31,60 @@ namespace data_structure
         {
             var node = new A056();
             node.Add(1);
+            node.Add(1);
             node.Add(2);
+            node.Add(2);
+            node.Add(3);
             node.Add(3);
             node.Add(4);
             node.Add(4);
             node.Add(5);
-            node.Add(6);
-            node.Add(6);
 
-            var innerHead = node._head;
-            while (innerHead.Next != null)
+            var current = node._head;
+            Node056 prev = null;
+
+            while (current != null && current.Next != null)
             {
-                if (innerHead.Next == null)
+                if (current.Data != current.Next.Data)
                 {
-                    break;
+                    prev = current;
+                    current = current.Next;
+                    continue;
                 }
-                innerHead = innerHead.Next;
-                if (innerHead.Data == innerHead.Next.Data)
+                else
                 {
-                    innerHead.Next = innerHead.Next.Next;
+                    while (current != null && current.Next != null && current.Data == current.Next.Data)
+                    {
+                        current = current.Next;
+                    }
+
+                    if (node._head.Data == current.Data)
+                    {
+                        node._head = current.Next;
+                    }
+                    else
+                    {
+                        prev.Next = current.Next;
+                    }
                 }
             }
+
+            // var innerHead = node._head;
+            // while (innerHead != null)
+            // {
+            //     if (innerHead.Next == null)
+            //     {
+            //         break;
+            //     }
+            //     if (innerHead.Data == innerHead.Next.Data)
+            //     {
+            //         innerHead.Next = innerHead.Next.Next;
+            //     }
+            //     else
+            //     {
+            //         innerHead = innerHead.Next;
+            //     }
+            // }
 
         }
     }
