@@ -47,7 +47,7 @@ namespace data_structure
             {
                 if (current.Data != current.Next.Data)
                 {
-                    prev = current;
+                     prev = current;
                     current = current.Next;
                     continue;
                 }
