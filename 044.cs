@@ -15,7 +15,7 @@ namespace data_structure
 
             for (int i = 0; i < a1.Length; i++)
             {
-                s1.Push(a1[i]);
+                s1.Push(a1[i]); 
             }
 
             while (s1.Count != 0)
