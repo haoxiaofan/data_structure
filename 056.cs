@@ -5,7 +5,7 @@ namespace data_structure
     internal class A056 : IRun
     {
         private Node056 _head;
- 
+
         internal void Add(Int32 data)
         {
             var newNode = new Node056
@@ -39,7 +39,20 @@ namespace data_structure
             node.Add(6);
             node.Add(6);
 
-            
+            var innerHead = node._head;
+            while (innerHead.Next != null)
+            {
+                if (innerHead.Next == null)
+                {
+                    break;
+                }
+                innerHead = innerHead.Next;
+                if (innerHead.Data == innerHead.Next.Data)
+                {
+                    innerHead.Next = innerHead.Next.Next;
+                }
+            }
+
         }
     }
 
