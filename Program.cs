@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace data_structure
@@ -9,10 +10,59 @@ namespace data_structure
         {
             // IRun basea = new A044();
             // basea.Run();
-            _2To10("101011");
-            _8To10("53");
-            _16To10();
+            //_2To10("1101");
+            // _8To10("53");
+            // _16To10();
+
+
+            var r = 0 * Pow(2, 3) + 1 * Pow(2, 2) + 1 * Pow(2, 1) + 1 * Pow(2, 0);
+            var r2 = 1 * Pow(2, 3) + 1 * Pow(2, 2) + 0 * Pow(2, 1) + 1 * Pow(2, 0);
+            // _10To2(43);
+            // _10To8(796);
+            // _10To16(796);
+            AA(7);
+
         }
+
+        private static void AA(Int32 data)
+        {
+            var shang = data;
+            var yu = new Stack<Int32>();
+            while (shang != 0)
+            {
+                var shang1 = shang / 2;
+                yu.Push(shang % 2);
+                shang = shang1;
+            }
+        }
+
+        private static void _10To8(Int32 data)
+        {
+            var shang = data;
+            var yu = new Stack<Int32>();
+            while (shang != 0)
+            {
+                var shang1 = shang / 8;
+                yu.Push(shang % 8);
+                shang = shang1;
+            }
+        }
+
+        private static void _10To2(Int32 data)
+        {
+            var shang = data;
+            var yu = new Stack<Int32>();
+            while (shang != 0)
+            {
+                var shang1 = shang / 2;
+                yu.Push(shang % 2);
+                shang = shang1;
+            }
+        }
+
+        #region （二、八、十六进制） → （十进制）
+
+
 
         /// <summary>
         /// 二进制转十进制
@@ -49,6 +99,8 @@ namespace data_structure
                 result += array[i] * Pow(16, i);
             }
         }
+
+        #endregion
 
         private static Int32 WordMapper(String str)
         {
