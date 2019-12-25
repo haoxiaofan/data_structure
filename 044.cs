@@ -7,7 +7,7 @@ namespace data_structure
     {
         public void Run()
         {
-            var str1 = " I    am a  student.     ";
+            var str1 = " I    am a  student.";
             str1 = str1.TrimStart().TrimEnd();
 
             var a1 = str1.Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
