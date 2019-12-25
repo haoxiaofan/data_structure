@@ -7,8 +7,82 @@ namespace data_structure
     {
         static void Main(string[] args)
         {
-            IRun basea = new A044();
-            basea.Run();
+            // IRun basea = new A044();
+            // basea.Run();
+            _2To10("101011");
+            _8To10("53");
+            _16To10();
+        }
+
+        /// <summary>
+        /// 二进制转十进制
+        /// </summary>
+        private static void _2To10(String str)
+        {
+            var array = GetArray(str);
+            var result = 0.0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                result += array[i] * Pow(2, i);
+            }
+        }
+
+        /// <summary>
+        /// 八进制转十进制 
+        /// </summary>
+        private static void _8To10(String str)
+        {
+            var array = GetArray(str);
+            var result = 0.0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                result += array[i] * Pow(8, i);
+            }
+        }
+
+        private static void _16To10()
+        {
+            var array = new Int32[2] { WordMapper("B"), 2 };
+            var result = 0.0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                result += array[i] * Pow(16, i);
+            }
+        }
+
+        private static Int32 WordMapper(String str)
+        {
+            switch (str)
+            {
+                case "A": return 10;
+                case "B": return 11;
+                case "C": return 12;
+                case "D": return 13;
+                case "E": return 14;
+                case "F": return 15;
+                default: throw new Exception();
+            }
+        }
+
+        private static Int32[] GetArray(String str)
+        {
+            return str.Select(s => Int32.Parse(s.ToString())).Reverse().ToArray();
+        }
+
+        private static long Pow(long x, long y)
+        {
+            int i = 1;
+            long X = x;
+            if (y == 0)
+            {
+                return 1;
+            }
+            while (i < y)
+            {
+                x = x * X;
+                i++;
+            }
+            return x;
         }
     }
 }
